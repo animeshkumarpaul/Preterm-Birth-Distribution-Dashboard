@@ -357,7 +357,7 @@ def build_diagnosis_plot(history_dict: Sequence[Any]) -> plt.Figure:
     temp_icd = diagnosis_code[0]
     icd_labels = diagnosis_code[1]
 
-    # top 10 codes by frequency (as in original script)
+    # top 10 codes by frequency
     top_codes = list(temp_icd.codes.value_counts().iloc[:10].index)
 
     fig, ax = plt.subplots(figsize=(20, 12))
